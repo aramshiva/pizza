@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
 const PizzaCalculator = () => {
   const [pizzaSize, setPizzaSize] = useState("");
@@ -6,7 +6,7 @@ const PizzaCalculator = () => {
   const [pricePerSquareInch, setPricePerSquareInch] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setIsLoading(true);
 
@@ -18,7 +18,7 @@ const PizzaCalculator = () => {
       body: JSON.stringify({
         pizzaSize: parseFloat(pizzaSize),
         pizzaCost: parseFloat(pizzaCost),
-        precision: 10000000,
+        precision: 1000000,
       }),
     });
 

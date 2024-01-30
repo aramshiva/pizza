@@ -1,6 +1,6 @@
 // pages/api/calculate.js
 
-export default function handler(req, res) {
+export default function handler(req: any, res: any) {
   if (req.method === "POST") {
     const { precision, pizzaSize, pizzaCost } = req.body;
     const calculatedPi = calculatePi(precision, precision);
@@ -15,7 +15,7 @@ export default function handler(req, res) {
   }
 }
 
-function calculatePi(precision, square) {
+function calculatePi(precision: any, square: any) {
   let count = 0;
   const radius = square / 2;
   for (let i = 0; i < precision; i++) {
