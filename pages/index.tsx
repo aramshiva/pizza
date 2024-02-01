@@ -18,7 +18,6 @@ const PizzaCalculator = () => {
       body: JSON.stringify({
         pizzaSize: parseFloat(pizzaSize),
         pizzaCost: parseFloat(pizzaCost),
-        precision: 1000000,
       }),
     });
 
