@@ -34,12 +34,10 @@ export default function handler(req: any, res: any) {
     payForCrust = pizzaCost * percentOfPizzaIsCrust;
   }
 
-  res
-      .status(200)
-      .json({
-        pricePerSquareInch,
-        pricePerSquareInchWithoutCrust,
-        percentOfPizzaIsCrust,
-        payForCrust,
-      });
+  res.status(200).json({
+    pricePerSquareInch,
+    pricePerSquareInchWithoutCrust,
+    percentOfPizzaIsCrust,
+    payForCrust,
+  });
 }
