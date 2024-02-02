@@ -40,7 +40,7 @@ interface PizzaResponse {
   pricePerSquareInch?: number;
   pricePerSquareInchWithoutCrust?: number;
   percentOfPizzaIsCrust?: number;
-  payForCrust?: boolean;
+  payForCrust?: number;
 }
 
 const PizzaCalculator = () => {
